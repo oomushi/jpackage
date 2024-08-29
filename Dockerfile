@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk-windowsservercore
+FROM eclipse-temurin:21-jdk-windowsservercore
 RUN powershell Set-Service -Name wuauserv -StartupType "Manual"
 RUN powershell Enable-WindowsOptionalFeature -Online -FeatureName "NetFx3" -All -NoRestart -WarningAction SilentlyContinue
 WORKDIR c:/
